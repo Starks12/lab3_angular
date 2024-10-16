@@ -1,0 +1,27 @@
+@import "styles/variables";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-icon {
+  margin-left: 16px;
+  font-size: 20px;
+  cursor: pointer;
+  &.gray-icon {
+    color: var(--gray-color);
+  }
+
+  &.accent-icon {
+    color: var(--accent-color);
+  }
+
+
+  &.main-icon:hover {
+    color: var(--main-color);
+  }
+
+  &.delete-icon:hover {
+    color: var(--warn-color);
+  }
+
+}
