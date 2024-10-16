@@ -10,7 +10,7 @@
       (keydown.enter)="addTodo()"
       [placeholder]="'Add new task'">
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="addTodo()" [disabled]="!newTodo">Add</button>
+  <button mat-raised-button color="primary" (click)="addTodo()" [disabled]="!newTodo">{{editMode ? 'Edit' : 'Add'}}</button>
   <mat-list>
     <mat-list-item *ngFor="let todo of todos; let i = index">
       <div class="list-item">
