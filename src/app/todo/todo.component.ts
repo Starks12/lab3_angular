@@ -15,6 +15,7 @@ export class TodoComponent implements OnInit {
   completedTodos: Todo[] = [];
   newTodo: string = '';
   editingIndex: number | null = null;
+  editMode: boolean = false;
 
   ngOnInit() {
     this.loadTodos();
@@ -31,6 +32,7 @@ export class TodoComponent implements OnInit {
       this.saveTodos();
       this.newTodo = '';
     }
+    this.editMode = false;
   }
 
 
@@ -40,6 +42,7 @@ export class TodoComponent implements OnInit {
   }
 
   editTodo(index: number) {
+    this.editMode = true;
     this.newTodo = this.todos[index].text;
     this.editingIndex = index;
   }

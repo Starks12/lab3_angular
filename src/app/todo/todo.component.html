@@ -7,6 +7,7 @@
       id="text"
       [type]="'text'"
       [(ngModel)]="newTodo"
+      (keydown.enter)="addTodo()"
       [placeholder]="'Add new task'">
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="addTodo()" [disabled]="!newTodo">Add</button>
